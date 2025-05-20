@@ -20,7 +20,7 @@ class MyApp extends App {
         const token = Cookies.get("token");
         const cart = Cookies.get("cart");
 
-        if (cart !== "undefine" && typeof cart === "string") {
+        if (cart !== "undefined" && typeof cart === "string") {
             JSON.parse(cart).forEach((item) => {
                 this.setState({
                     cart: {
